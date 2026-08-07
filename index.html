@@ -2,7 +2,6 @@
 
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,6 +24,8 @@ body {
     color: white;
 }
 
+/* HEADER */
+
 header {
     text-align: center;
     padding: 45px 20px;
@@ -40,7 +41,6 @@ header {
 }
 
 @keyframes float {
-
     0%, 100% {
         transform: translateY(0);
     }
@@ -48,7 +48,6 @@ header {
     50% {
         transform: translateY(-10px);
     }
-
 }
 
 h1 {
@@ -58,9 +57,11 @@ h1 {
 }
 
 .subtitle {
-    color: #ccc;
+    color: #cccccc;
     font-size: 20px;
 }
+
+/* MAIN */
 
 .container {
     max-width: 1100px;
@@ -80,6 +81,8 @@ h2 {
     color: #00aaff;
 }
 
+/* PRODUCTS */
+
 .product {
     background: #101820;
     padding: 20px;
@@ -91,6 +94,8 @@ h2 {
 .product h3 {
     margin-top: 0;
 }
+
+/* BUTTONS */
 
 .button {
     display: inline-block;
@@ -110,6 +115,8 @@ h2 {
     transform: translateY(-2px);
 }
 
+/* INPUT */
+
 input {
     padding: 12px;
     border-radius: 8px;
@@ -121,6 +128,8 @@ input {
 #status {
     margin-top: 15px;
 }
+
+/* CONTACT */
 
 .contact-box {
     background: #101820;
@@ -143,10 +152,12 @@ input {
     color: #66ccff;
 }
 
+/* FOOTER */
+
 footer {
     text-align: center;
     padding: 30px 20px;
-    color: #888;
+    color: #888888;
     border-top: 1px solid #1d3345;
 }
 
@@ -156,9 +167,13 @@ footer {
 
 <body>
 
+<!-- ==============================
+     HEADER
+================================ -->
+
 <header>
 
-```
+ 
 <img
     src="LOGO.png"
     class="logo"
@@ -170,9 +185,13 @@ footer {
 <div class="subtitle">
     Technology • Repairs • Software • Innovation
 </div>
-```
+ 
 
 </header>
+
+<!-- ==============================
+     MAIN CONTENT
+================================ -->
 
 <div class="container">
 
@@ -180,7 +199,7 @@ footer {
 
 <div class="card">
 
-```
+ 
 <h2>🏢 Welcome</h2>
 
 <p>
@@ -192,7 +211,7 @@ footer {
     Explore our software, projects, and technology
     solutions below.
 </p>
-```
+ 
 
 </div>
 
@@ -200,7 +219,7 @@ footer {
 
 <div class="card">
 
-```
+ 
 <h2>🔐 TechZMaxz Membership Access</h2>
 
 <p>
@@ -221,15 +240,15 @@ footer {
 </button>
 
 <p id="status"></p>
-```
+ 
 
 </div>
 
-<!-- DOWNLOADS -->
+<!-- SOFTWARE DOWNLOADS -->
 
 <div class="card">
 
-```
+ 
 <h2>📦 Software Downloads</h2>
 
 <p>
@@ -237,6 +256,8 @@ footer {
     TechZMaxz members.
 </p>
 
+
+<!-- EXPLORER + NOTEPAD -->
 
 <div class="product">
 
@@ -251,8 +272,8 @@ footer {
     <button
         class="button"
         onclick="downloadFile(
-        'https://drive.google.com/file/d/1iAqRUUACWiAysSJt9O5PkV8DevPdeyQZ/view?usp=drive_link',
-        'TechZMaxz Explorer + Notepad Bundle'
+            'https://drive.google.com/file/d/1iAqRUUACWiAysSJt9O5PkV8DevPdeyQZ/view?usp=drive_link',
+            'TechZMaxz Explorer + Notepad Bundle'
         )"
     >
         Download
@@ -260,6 +281,8 @@ footer {
 
 </div>
 
+
+<!-- FILE LOCKER ECO -->
 
 <div class="product">
 
@@ -274,8 +297,8 @@ footer {
     <button
         class="button"
         onclick="downloadFile(
-        'https://drive.google.com/file/d/1Wil_EHko0qDE2VwHjnP8bRn0MhloBHGQ/view?usp=drive_link',
-        'TechZMaxz File Locker Eco Edition'
+            'https://drive.google.com/file/d/1Wil_EHko0qDE2VwHjnP8bRn0MhloBHGQ/view?usp=drive_link',
+            'TechZMaxz File Locker Eco Edition'
         )"
     >
         Download
@@ -283,6 +306,8 @@ footer {
 
 </div>
 
+
+<!-- FILE LOCKER HOME -->
 
 <div class="product">
 
@@ -297,15 +322,15 @@ footer {
     <button
         class="button"
         onclick="downloadFile(
-        'https://drive.google.com/file/d/1gttfxr4cXrGlp_xjhBojuU6vdNuaLs5I/view?usp=drive_link',
-        'TechZMaxz File Locker Home Edition'
+            'https://drive.google.com/file/d/1gttfxr4cXrGlp_xjhBojuU6vdNuaLs5I/view?usp=drive_link',
+            'TechZMaxz File Locker Home Edition'
         )"
     >
         Download
     </button>
 
 </div>
-```
+ 
 
 </div>
 
@@ -313,7 +338,7 @@ footer {
 
 <div class="card">
 
-```
+ 
 <h2>📰 Release Notes</h2>
 
 <ul>
@@ -339,7 +364,7 @@ footer {
     </li>
 
 </ul>
-```
+ 
 
 </div>
 
@@ -347,7 +372,7 @@ footer {
 
 <div class="card">
 
-```
+ 
 <h2>🖥️ TechZMaxz OS</h2>
 
 <p>
@@ -358,7 +383,7 @@ footer {
 <p>
     <strong>Status:</strong> Development
 </p>
-```
+ 
 
 </div>
 
@@ -366,27 +391,31 @@ footer {
 
 <div class="card">
 
-```
+ 
 <h2>🛠️ Services</h2>
 
 <ul>
 
-    <li>Computer Repairs</li>
+    <li>
+        Computer Repairs
+    </li>
 
-    <li>Software Development</li>
+    <li>
+        Software Development
+    </li>
 
-    <li>Technology Projects</li>
+    <li>
+        Technology Projects
+    </li>
 
 </ul>
-```
 
 </div>
 
 <!-- CONTACT -->
 
 <div class="card" id="contact">
-
-```
+    
 <h2>📧 Contact TechZMaxz</h2>
 
 <div class="contact-box">
@@ -408,31 +437,46 @@ footer {
     </a>
 
 </div>
-```
+ 
 
 </div>
 
 </div>
+
+<!-- ==============================
+     FOOTER
+================================ -->
 
 <footer>
 
-```
+ 
 © 2026 TechZMaxz
 
 <br><br>
 
 Technology • Repairs • Software • Innovation
-```
+ 
 
 </footer>
 
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
 <script>
 
+/*
+========================================
+TECHZMAXZ MEMBERSHIP DATABASE
 
-// ==========================================
-// TECHZMAXZ MEMBERSHIP DATABASE
-// ADD NEW MEMBERS HERE
-// ==========================================
+ADD NEW MEMBERS HERE.
+
+Example:
+
+"0004": "New Member"
+
+========================================
+*/
 
 const memberCards = {
 
@@ -445,26 +489,30 @@ const memberCards = {
 };
 
 
-// ==========================================
-// MEMBERSHIP SYSTEM
-// ==========================================
+/*
+========================================
+MEMBERSHIP VARIABLES
+========================================
+*/
 
 let verified = false;
 
 let currentMember = "";
 
 
-// ==========================================
-// VERIFY CARD
-// ==========================================
+/*
+========================================
+VERIFY CARD
+========================================
+*/
 
 function verifyCard() {
 
     const entered =
         document
-        .getElementById("cardInput")
-        .value
-        .trim();
+            .getElementById("cardInput")
+            .value
+            .trim();
 
 
     if (memberCards[entered]) {
@@ -476,13 +524,13 @@ function verifyCard() {
 
 
         document
-        .getElementById("status")
-        .innerHTML =
-            "✅ Card Verified<br>" +
-            "Welcome, " +
-            currentMember +
-            "!<br>" +
-            "Downloads Unlocked";
+            .getElementById("status")
+            .innerHTML =
+                "✅ Card Verified<br>" +
+                "Welcome, " +
+                currentMember +
+                "!<br>" +
+                "Downloads Unlocked";
 
     }
 
@@ -494,18 +542,24 @@ function verifyCard() {
 
 
         document
-        .getElementById("status")
-        .innerHTML =
-            "❌ Invalid TechZMaxz Card Number";
+            .getElementById("status")
+            .innerHTML =
+                "❌ Invalid TechZMaxz Card Number";
 
     }
 
 }
 
 
-// ==========================================
-// PURCHASE HISTORY
-// ==========================================
+/*
+========================================
+PURCHASE HISTORY
+
+This uses the visitor's browser storage.
+
+It does NOT create a shared online database.
+========================================
+*/
 
 let purchaseHistory =
     JSON.parse(
@@ -515,9 +569,11 @@ let purchaseHistory =
     ) || {};
 
 
-// ==========================================
-// RECORD DOWNLOAD
-// ==========================================
+/*
+========================================
+RECORD DOWNLOAD
+========================================
+*/
 
 function recordPurchase(product) {
 
@@ -539,7 +595,7 @@ function recordPurchase(product) {
 
         date:
             new Date()
-            .toLocaleString()
+                .toLocaleString()
 
     });
 
@@ -557,9 +613,11 @@ function recordPurchase(product) {
 }
 
 
-// ==========================================
-// DOWNLOAD PROTECTION
-// ==========================================
+/*
+========================================
+DOWNLOAD PROTECTION
+========================================
+*/
 
 function downloadFile(link, product) {
 
@@ -587,5 +645,4 @@ function downloadFile(link, product) {
 </script>
 
 </body>
-
 </html>
