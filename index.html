@@ -1,39 +1,367 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TechZMaxz</title>
-    <style>
-        body{
-            background:#0d1117;
-            color:white;
-            font-family:Arial;
-            text-align:center;
-            margin-top:80px;
-        }
 
-        h1{
-            color:#00aaff;
-            font-size:60px;
-        }
+<title>TechZMaxz | Technology • Repairs • Software • Innovation</title>
 
-        .button{
-            display:inline-block;
-            padding:15px 30px;
-            background:#0078ff;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            margin-top:20px;
-        }
-    </style>
+<style>
+
+body {
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b1118;
+    color:white;
+}
+
+header {
+    text-align:center;
+    padding:35px;
+    background:#101820;
+    border-bottom:3px solid #009dff;
+}
+
+.logo {
+    width:128px;
+    height:128px;
+    animation:float 3s infinite;
+}
+
+@keyframes float {
+    50% {
+        transform:translateY(-10px);
+    }
+}
+
+h1 {
+    color:#009dff;
+    font-size:48px;
+}
+
+.subtitle {
+    color:#ccc;
+    font-size:20px;
+}
+
+.container {
+    max-width:1100px;
+    margin:auto;
+    padding:30px;
+}
+
+.card {
+    background:#151f2b;
+    padding:25px;
+    margin:25px 0;
+    border-left:5px solid #009dff;
+    border-radius:15px;
+}
+
+h2 {
+    color:#00aaff;
+}
+
+.product {
+    background:#101820;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+.button {
+    display:inline-block;
+    background:#0078ff;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    cursor:pointer;
+    border:none;
+}
+
+.button:hover {
+    background:#00aaff;
+}
+
+input {
+    padding:12px;
+    border-radius:8px;
+    border:none;
+}
+
+#status {
+    margin-top:15px;
+}
+
+footer {
+    text-align:center;
+    padding:25px;
+    color:#888;
+}
+
+</style>
+
 </head>
+
+
 <body>
+
+
+<header>
+
+<img src="icon.png" class="logo">
 
 <h1>TECHZMAXZ</h1>
 
-<p>Technology • Repairs • Software • Innovation</p>
+<div class="subtitle">
+Technology • Repairs • Software • Innovation
+</div>
 
-<a class="button" href="#">Downloads</a>
+</header>
+
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+<h2>🏢 Welcome</h2>
+
+<p>
+Professional technology solutions, repairs, and software innovation.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>🔐 TechZMaxz Membership Access</h2>
+
+<p>
+Enter your TechZMaxz Card Number:
+</p>
+
+<input id="cardInput" placeholder="Card Number">
+
+<button class="button" onclick="verifyCard()">
+Verify Card
+</button>
+
+<p id="status"></p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>📦 Software Downloads</h2>
+
+
+<div class="product">
+
+<h3>TechZMaxz Explorer + Notepad Bundle</h3>
+
+<p>Version 1.0</p>
+
+<button class="button"
+onclick="downloadFile('https://drive.google.com/file/d/1iAqRUUACWiAysSJt9O5PkV8DevPdeyQZ/view?usp=drive_link')">
+Download
+</button>
+
+</div>
+
+
+
+<div class="product">
+
+<h3>TechZMaxz File Locker Eco Edition</h3>
+
+<p>Version 1.0</p>
+
+<button class="button"
+onclick="downloadFile('https://drive.google.com/file/d/1Wil_EHko0qDE2VwHjnP8bRn0MhloBHGQ/view?usp=drive_link')">
+Download
+</button>
+
+</div>
+
+
+
+
+<div class="product">
+
+<h3>TechZMaxz File Locker Home Edition</h3>
+
+<p>Version 1.0</p>
+
+<button class="button"
+onclick="downloadFile('https://drive.google.com/file/d/1gttfxr4cXrGlp_xjhBojuU6vdNuaLs5I/view?usp=drive_link')">
+Download
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>📰 Release Notes</h2>
+
+<ul>
+<li>Website redesign launched</li>
+<li>Member access added</li>
+<li>Software center created</li>
+<li>TechZMaxz products released</li>
+</ul>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>🖥️ TechZMaxz OS</h2>
+
+<p>
+Next-generation TechZMaxz operating system project.
+</p>
+
+<p>
+Status: Development
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>🛠️ Services</h2>
+
+<ul>
+<li>Computer Repairs</li>
+<li>Software Development</li>
+<li>Technology Projects</li>
+</ul>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<footer>
+
+© 2026 TechZMaxz
+
+</footer>
+
+
+
+
+
+<script>
+
+
+// ===============================
+// TECHZMAXZ MEMBERSHIP CARD LIST
+// ADD NEW CARDS HERE
+// ===============================
+
+
+const memberCards = [
+
+"0001",
+"0002"
+
+];
+
+
+
+// ===============================
+// CARD VERIFICATION
+// ===============================
+
+
+let verified = false;
+
+
+function verifyCard(){
+
+let entered =
+document.getElementById("cardInput").value;
+
+
+if(memberCards.includes(entered)){
+
+verified = true;
+
+document.getElementById("status").innerHTML =
+"✅ Card Verified - Downloads Unlocked";
+
+}
+
+else{
+
+verified = false;
+
+document.getElementById("status").innerHTML =
+"❌ Invalid Card Number";
+
+}
+
+}
+
+
+
+
+
+// ===============================
+// DOWNLOAD PROTECTION
+// ===============================
+
+
+function downloadFile(link){
+
+if(verified){
+
+window.open(link,"_blank");
+
+}
+
+else{
+
+alert(
+"🔒 TechZMaxz Membership Card Required"
+);
+
+}
+
+}
+
+
+</script>
+
 
 </body>
 </html>
