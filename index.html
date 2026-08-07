@@ -1,614 +1,591 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TechZMaxz | Technology • Repairs • Software • Innovation</title>
 
 <style>
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0b1118;
-    color:white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1118;
+    color: white;
 }
 
 header {
-    text-align:center;
-    padding:35px;
-    background:#101820;
-    border-bottom:3px solid #009dff;
+    text-align: center;
+    padding: 45px 20px;
+    background: #101820;
+    border-bottom: 3px solid #009dff;
 }
 
 .logo {
-    width:128px;
-    height:128px;
-    animation:float 3s infinite ease-in-out;
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-    50% {
-        transform:translateY(-10px);
+
+    0%, 100% {
+        transform: translateY(0);
     }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
 }
 
 h1 {
-    color:#009dff;
-    font-size:48px;
+    color: #009dff;
+    font-size: clamp(38px, 7vw, 52px);
+    margin: 15px 0 10px;
 }
 
 .subtitle {
-    color:#ccc;
-    font-size:20px;
+    color: #ccc;
+    font-size: 20px;
 }
 
 .container {
-    max-width:1100px;
-    margin:auto;
-    padding:30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
 }
 
 .card {
-    background:#151f2b;
-    padding:25px;
-    margin:25px 0;
-    border-left:5px solid #009dff;
-    border-radius:15px;
+    background: #151f2b;
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid #009dff;
+    border-radius: 15px;
 }
 
 h2 {
-    color:#00aaff;
+    color: #00aaff;
 }
 
 .product {
-    background:#101820;
-    padding:15px;
-    margin:15px 0;
-    border-radius:10px;
+    background: #101820;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #1d3345;
+}
+
+.product h3 {
+    margin-top: 0;
 }
 
 .button {
-    display:inline-block;
-    background:#0078ff;
-    color:white;
-    padding:12px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    cursor:pointer;
-    border:none;
+    display: inline-block;
+    background: #0078ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    transition: 0.2s;
 }
 
 .button:hover {
-    background:#00aaff;
+    background: #00aaff;
+    transform: translateY(-2px);
 }
 
 input {
-    padding:12px;
-    border-radius:8px;
-    border:none;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 8px;
+    margin-bottom: 10px;
 }
 
 #status {
-    margin-top:15px;
+    margin-top: 15px;
+}
+
+.contact-box {
+    background: #101820;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #1d3345;
+}
+
+.email {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00aaff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: #66ccff;
 }
 
 footer {
-    text-align:center;
-    padding:25px;
-    color:#888;
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+    border-top: 1px solid #1d3345;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
-<img src="LOGO.png" class="logo">
+```
+<img
+    src="logo.png"
+    class="logo"
+    alt="TechZMaxz Logo"
+>
 
 <h1>TECHZMAXZ</h1>
 
 <div class="subtitle">
-Technology • Repairs • Software • Innovation
+    Technology • Repairs • Software • Innovation
 </div>
+```
 
 </header>
 
-
-
 <div class="container">
 
+<!-- WELCOME -->
 
 <div class="card">
 
-<h2>🏢 Welcome to TechZMaxz</h2>
+```
+<h2>🏢 Welcome</h2>
 
 <p>
-Professional technology solutions, repairs, and software innovation.
+    Welcome to TechZMaxz — technology, repairs,
+    software, and innovation.
 </p>
+
+<p>
+    Explore our software, projects, and technology
+    solutions below.
+</p>
+```
 
 </div>
 
-
+<!-- MEMBERSHIP -->
 
 <div class="card">
 
+```
 <h2>🔐 TechZMaxz Membership Access</h2>
 
 <p>
-Enter your TechZMaxz Card Number:
+    Enter your TechZMaxz Card Number:
 </p>
 
-<input id="cardInput" placeholder="Card Number">
+<input
+    id="cardInput"
+    placeholder="Card Number"
+    autocomplete="off"
+>
 
-<button class="button" onclick="verifyCard()">
-Verify Card
+<button
+    class="button"
+    onclick="verifyCard()"
+>
+    Verify Card
 </button>
 
 <p id="status"></p>
+```
 
 </div>
 
-
-
-<div class="card">
-
-<h2>📜 Purchase History</h2>
-
-<p id="history">
-Login to view purchase history.
-</p>
-
-<button class="button" onclick="downloadPurchaseHistory()">
-Download Purchase History
-</button>
-
-</div>
-
-
+<!-- DOWNLOADS -->
 
 <div class="card">
 
+```
 <h2>📦 Software Downloads</h2>
 
-
-<div class="product">
-
-<h3>TechZMaxz Explorer + Notepad Bundle</h3>
-
-<p>Version 1.0</p>
-
-<button class="button"
-onclick="downloadFile('https://drive.google.com/file/d/1iAqRUUACWiAysSJt9O5PkV8DevPdeyQZ/view?usp=drive_link','TechZMaxz Explorer + Notepad Bundle')">
-Download
-</button>
-
-</div>
-
+<p>
+    TechZMaxz software is available to verified
+    TechZMaxz members.
+</p>
 
 
 <div class="product">
 
-<h3>TechZMaxz File Locker Eco Edition</h3>
+    <h3>
+        TechZMaxz Explorer + Notepad Bundle
+    </h3>
 
-<p>Version 1.0</p>
+    <p>
+        Version 1.0
+    </p>
 
-<button class="button"
-onclick="downloadFile('https://drive.google.com/file/d/1Wil_EHko0qDE2VwHjnP8bRn0MhloBHGQ/view?usp=drive_link','TechZMaxz File Locker Eco Edition')">
-Download
-</button>
+    <button
+        class="button"
+        onclick="downloadFile(
+        'https://drive.google.com/file/d/1iAqRUUACWiAysSJt9O5PkV8DevPdeyQZ/view?usp=drive_link',
+        'TechZMaxz Explorer + Notepad Bundle'
+        )"
+    >
+        Download
+    </button>
 
 </div>
-
 
 
 <div class="product">
 
-<h3>TechZMaxz File Locker Home Edition</h3>
+    <h3>
+        TechZMaxz File Locker Eco Edition
+    </h3>
 
-<p>Version 1.0</p>
+    <p>
+        Version 1.0
+    </p>
 
-<button class="button"
-onclick="downloadFile('https://drive.google.com/file/d/1gttfxr4cXrGlp_xjhBojuU6vdNuaLs5I/view?usp=drive_link','TechZMaxz File Locker Home Edition')">
-Download
-</button>
+    <button
+        class="button"
+        onclick="downloadFile(
+        'https://drive.google.com/file/d/1Wil_EHko0qDE2VwHjnP8bRn0MhloBHGQ/view?usp=drive_link',
+        'TechZMaxz File Locker Eco Edition'
+        )"
+    >
+        Download
+    </button>
 
 </div>
 
 
+<div class="product">
+
+    <h3>
+        TechZMaxz File Locker Home Edition
+    </h3>
+
+    <p>
+        Version 1.0
+    </p>
+
+    <button
+        class="button"
+        onclick="downloadFile(
+        'https://drive.google.com/file/d/1gttfxr4cXrGlp_xjhBojuU6vdNuaLs5I/view?usp=drive_link',
+        'TechZMaxz File Locker Home Edition'
+        )"
+    >
+        Download
+    </button>
+
+</div>
+```
+
 </div>
 
-    <div class="card">
+<!-- RELEASE NOTES -->
 
+<div class="card">
+
+```
 <h2>📰 Release Notes</h2>
 
 <ul>
 
-<li>Website redesign launched</li>
-<li>Member access added</li>
-<li>Software center created</li>
-<li>Purchase tracking added</li>
-<li>TechZMaxz products released</li>
+    <li>
+        TechZMaxz website redesign launched
+    </li>
+
+    <li>
+        Member access system added
+    </li>
+
+    <li>
+        Software center created
+    </li>
+
+    <li>
+        TechZMaxz products released
+    </li>
+
+    <li>
+        Contact information added
+    </li>
 
 </ul>
+```
 
 </div>
 
-
-
+<!-- TECHZMAXZ OS -->
 
 <div class="card">
 
+```
 <h2>🖥️ TechZMaxz OS</h2>
 
 <p>
-Next-generation TechZMaxz operating system project.
+    Next-generation TechZMaxz operating system
+    project.
 </p>
 
 <p>
-Status: Development
+    <strong>Status:</strong> Development
 </p>
+```
 
 </div>
 
-
-
+<!-- SERVICES -->
 
 <div class="card">
 
+```
 <h2>🛠️ Services</h2>
 
 <ul>
 
-<li>Computer Repairs</li>
-<li>Software Development</li>
-<li>Technology Projects</li>
-<li>Custom Solutions</li>
+    <li>Computer Repairs</li>
+
+    <li>Software Development</li>
+
+    <li>Technology Projects</li>
 
 </ul>
+```
 
 </div>
 
+<!-- CONTACT -->
+
+<div class="card" id="contact">
+
+```
+<h2>📧 Contact TechZMaxz</h2>
+
+<div class="contact-box">
+
+    <p>
+        Have a question, project idea, or need
+        technical assistance?
+    </p>
+
+    <p>
+        Email TechZMaxz:
+    </p>
+
+    <a
+        class="email"
+        href="mailto:Techzmaxz@outlook.com"
+    >
+        Techzmaxz@outlook.com
+    </a>
+
+</div>
+```
 
 </div>
 
-
+</div>
 
 <footer>
 
+```
 © 2026 TechZMaxz
-<br>
+
+<br><br>
+
 Technology • Repairs • Software • Innovation
+```
 
 </footer>
-
-
-
 
 <script>
 
 
-// ==================================
+// ==========================================
 // TECHZMAXZ MEMBERSHIP DATABASE
 // ADD NEW MEMBERS HERE
-// ==================================
-
+// ==========================================
 
 const memberCards = {
 
-    "0001": "Theodore",
-    "0002": "Kellie"
+    "0001": "William",
+
+    "0002": "TechZMaxz Tester",
+
+    "0003": "New Member"
 
 };
 
 
-
-// ==================================
-// VARIABLES
-// ==================================
-
+// ==========================================
+// MEMBERSHIP SYSTEM
+// ==========================================
 
 let verified = false;
 
 let currentMember = "";
 
+
+// ==========================================
+// VERIFY CARD
+// ==========================================
+
+function verifyCard() {
+
+    const entered =
+        document
+        .getElementById("cardInput")
+        .value
+        .trim();
+
+
+    if (memberCards[entered]) {
+
+        verified = true;
+
+        currentMember =
+            memberCards[entered];
+
+
+        document
+        .getElementById("status")
+        .innerHTML =
+            "✅ Card Verified<br>" +
+            "Welcome, " +
+            currentMember +
+            "!<br>" +
+            "Downloads Unlocked";
+
+    }
+
+    else {
+
+        verified = false;
+
+        currentMember = "";
+
+
+        document
+        .getElementById("status")
+        .innerHTML =
+            "❌ Invalid TechZMaxz Card Number";
+
+    }
+
+}
+
+
+// ==========================================
+// PURCHASE HISTORY
+// ==========================================
+
 let purchaseHistory =
-JSON.parse(localStorage.getItem("TechZMaxzPurchases")) || {};
+    JSON.parse(
+        localStorage.getItem(
+            "TechZMaxzPurchases"
+        )
+    ) || {};
 
 
+// ==========================================
+// RECORD DOWNLOAD
+// ==========================================
+
+function recordPurchase(product) {
+
+    if (!currentMember) {
+        return;
+    }
 
 
-// ==================================
-// VERIFY MEMBER CARD
-// ==================================
+    if (!purchaseHistory[currentMember]) {
+
+        purchaseHistory[currentMember] = [];
+
+    }
 
 
-function verifyCard(){
+    purchaseHistory[currentMember].push({
 
-let entered =
-document.getElementById("cardInput").value.trim();
+        item: product,
 
+        date:
+            new Date()
+            .toLocaleString()
 
-if(memberCards[entered]){
-
-
-verified = true;
-
-currentMember = memberCards[entered];
+    });
 
 
-if(!purchaseHistory[currentMember]){
+    localStorage.setItem(
 
-purchaseHistory[currentMember] = [];
+        "TechZMaxzPurchases",
 
-}
+        JSON.stringify(
+            purchaseHistory
+        )
 
-
-document.getElementById("status").innerHTML =
-
-"✅ Card Verified<br>" +
-"Welcome, " + currentMember +
-"!<br>Downloads Unlocked";
-
-
-showHistory();
-
-
-}
-
-
-else{
-
-
-verified = false;
-
-currentMember = "";
-
-
-document.getElementById("status").innerHTML =
-
-"❌ Invalid TechZMaxz Card Number";
-
+    );
 
 }
 
 
-}
-
-
-
-
-// ==================================
+// ==========================================
 // DOWNLOAD PROTECTION
-// ==================================
+// ==========================================
+
+function downloadFile(link, product) {
+
+    if (!verified) {
+
+        alert(
+            "🔒 TechZMaxz Membership Card Required"
+        );
+
+        return;
+
+    }
 
 
-function downloadFile(link, product){
+    recordPurchase(product);
 
 
-if(verified){
-
-
-recordPurchase(product);
-
-
-window.open(link,"_blank");
-
-
-}
-
-
-else{
-
-
-alert(
-"🔒 TechZMaxz Membership Card Required"
-);
-
+    window.open(
+        link,
+        "_blank"
+    );
 
 }
-
-
-}
-
-
-
-
-// ==================================
-// SAVE PURCHASE HISTORY
-// ==================================
-
-
-function recordPurchase(product){
-
-
-if(!purchaseHistory[currentMember]){
-
-purchaseHistory[currentMember] = [];
-
-}
-
-
-
-purchaseHistory[currentMember].push({
-
-item: product,
-
-date: new Date().toLocaleString()
-
-});
-
-
-
-localStorage.setItem(
-
-"TechZMaxzPurchases",
-
-JSON.stringify(purchaseHistory)
-
-);
-
-
-
-showHistory();
-
-
-}
-
-
-
-
-
-// ==================================
-// SHOW PURCHASE HISTORY
-// ==================================
-
-
-function showHistory(){
-
-
-let historyBox =
-document.getElementById("history");
-
-
-
-if(!purchaseHistory[currentMember] ||
-purchaseHistory[currentMember].length === 0){
-
-
-historyBox.innerHTML =
-"No purchases yet.";
-
-
-return;
-
-
-}
-
-
-
-
-let output = "";
-
-
-
-purchaseHistory[currentMember].forEach(function(item){
-
-
-output +=
-
-"📦 " + item.item +
-"<br>" +
-
-"📅 " + item.date +
-"<br><br>";
-
-
-});
-
-
-
-historyBox.innerHTML = output;
-
-
-}
-
-
-
-
-// ==================================
-// DOWNLOAD PURCHASE HISTORY FILE
-// ==================================
-
-
-function downloadPurchaseHistory(){
-
-
-if(!verified){
-
-
-alert(
-"🔒 Verify your TechZMaxz Card first."
-);
-
-
-return;
-
-
-}
-
-
-
-let text =
-
-"TECHZMAXZ PURCHASE HISTORY\n" +
-
-"============================\n\n" +
-
-"Member: " + currentMember +
-
-"\n\n";
-
-
-
-
-if(purchaseHistory[currentMember]){
-
-
-purchaseHistory[currentMember].forEach(function(item){
-
-
-text +=
-
-"Product: " + item.item +
-
-"\nDate: " + item.date +
-
-"\n\n";
-
-
-});
-
-
-}
-
-
-
-let file = new Blob(
-
-[text],
-
-{type:"text/plain"}
-
-);
-
-
-
-let link = document.createElement("a");
-
-
-link.href = URL.createObjectURL(file);
-
-
-link.download =
-
-"TechZMaxz_" + currentMember + "_Purchase_History.txt";
-
-
-
-link.click();
-
-
-}
-
-
 
 </script>
 
-
 </body>
+
 </html>
