@@ -221,3 +221,395 @@ Download
 
 
 </div>
+
+    <div class="card">
+
+<h2>📰 Release Notes</h2>
+
+<ul>
+
+<li>Website redesign launched</li>
+<li>Member access added</li>
+<li>Software center created</li>
+<li>Purchase tracking added</li>
+<li>TechZMaxz products released</li>
+
+</ul>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>🖥️ TechZMaxz OS</h2>
+
+<p>
+Next-generation TechZMaxz operating system project.
+</p>
+
+<p>
+Status: Development
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>🛠️ Services</h2>
+
+<ul>
+
+<li>Computer Repairs</li>
+<li>Software Development</li>
+<li>Technology Projects</li>
+<li>Custom Solutions</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+
+<footer>
+
+© 2026 TechZMaxz
+<br>
+Technology • Repairs • Software • Innovation
+
+</footer>
+
+
+
+
+<script>
+
+
+// ==================================
+// TECHZMAXZ MEMBERSHIP DATABASE
+// ADD NEW MEMBERS HERE
+// ==================================
+
+
+const memberCards = {
+
+    "0001": "William",
+    "0002": "TechZMaxz Tester",
+    "0003": "New Member"
+
+};
+
+
+
+// ==================================
+// VARIABLES
+// ==================================
+
+
+let verified = false;
+
+let currentMember = "";
+
+let purchaseHistory =
+JSON.parse(localStorage.getItem("TechZMaxzPurchases")) || {};
+
+
+
+
+// ==================================
+// VERIFY MEMBER CARD
+// ==================================
+
+
+function verifyCard(){
+
+let entered =
+document.getElementById("cardInput").value.trim();
+
+
+if(memberCards[entered]){
+
+
+verified = true;
+
+currentMember = memberCards[entered];
+
+
+if(!purchaseHistory[currentMember]){
+
+purchaseHistory[currentMember] = [];
+
+}
+
+
+document.getElementById("status").innerHTML =
+
+"✅ Card Verified<br>" +
+"Welcome, " + currentMember +
+"!<br>Downloads Unlocked";
+
+
+showHistory();
+
+
+}
+
+
+else{
+
+
+verified = false;
+
+currentMember = "";
+
+
+document.getElementById("status").innerHTML =
+
+"❌ Invalid TechZMaxz Card Number";
+
+
+}
+
+
+}
+
+
+
+
+// ==================================
+// DOWNLOAD PROTECTION
+// ==================================
+
+
+function downloadFile(link, product){
+
+
+if(verified){
+
+
+recordPurchase(product);
+
+
+window.open(link,"_blank");
+
+
+}
+
+
+else{
+
+
+alert(
+"🔒 TechZMaxz Membership Card Required"
+);
+
+
+}
+
+
+}
+
+
+
+
+// ==================================
+// SAVE PURCHASE HISTORY
+// ==================================
+
+
+function recordPurchase(product){
+
+
+if(!purchaseHistory[currentMember]){
+
+purchaseHistory[currentMember] = [];
+
+}
+
+
+
+purchaseHistory[currentMember].push({
+
+item: product,
+
+date: new Date().toLocaleString()
+
+});
+
+
+
+localStorage.setItem(
+
+"TechZMaxzPurchases",
+
+JSON.stringify(purchaseHistory)
+
+);
+
+
+
+showHistory();
+
+
+}
+
+
+
+
+
+// ==================================
+// SHOW PURCHASE HISTORY
+// ==================================
+
+
+function showHistory(){
+
+
+let historyBox =
+document.getElementById("history");
+
+
+
+if(!purchaseHistory[currentMember] ||
+purchaseHistory[currentMember].length === 0){
+
+
+historyBox.innerHTML =
+"No purchases yet.";
+
+
+return;
+
+
+}
+
+
+
+
+let output = "";
+
+
+
+purchaseHistory[currentMember].forEach(function(item){
+
+
+output +=
+
+"📦 " + item.item +
+"<br>" +
+
+"📅 " + item.date +
+"<br><br>";
+
+
+});
+
+
+
+historyBox.innerHTML = output;
+
+
+}
+
+
+
+
+// ==================================
+// DOWNLOAD PURCHASE HISTORY FILE
+// ==================================
+
+
+function downloadPurchaseHistory(){
+
+
+if(!verified){
+
+
+alert(
+"🔒 Verify your TechZMaxz Card first."
+);
+
+
+return;
+
+
+}
+
+
+
+let text =
+
+"TECHZMAXZ PURCHASE HISTORY\n" +
+
+"============================\n\n" +
+
+"Member: " + currentMember +
+
+"\n\n";
+
+
+
+
+if(purchaseHistory[currentMember]){
+
+
+purchaseHistory[currentMember].forEach(function(item){
+
+
+text +=
+
+"Product: " + item.item +
+
+"\nDate: " + item.date +
+
+"\n\n";
+
+
+});
+
+
+}
+
+
+
+let file = new Blob(
+
+[text],
+
+{type:"text/plain"}
+
+);
+
+
+
+let link = document.createElement("a");
+
+
+link.href = URL.createObjectURL(file);
+
+
+link.download =
+
+"TechZMaxz_" + currentMember + "_Purchase_History.txt";
+
+
+
+link.click();
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
