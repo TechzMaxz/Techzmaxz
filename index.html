@@ -282,29 +282,26 @@ Status: Development
 
 <script>
 
-
 // ===============================
-// TECHZMAXZ MEMBERSHIP CARD LIST
-// ADD NEW CARDS HERE
+// TECHZMAXZ MEMBERSHIP DATABASE
+// ADD NEW MEMBERS HERE
 // ===============================
 
+const memberCards = {
 
-const memberCards = [
+    "0001": "William",
+    "0002": "TechZMaxz Tester",
+    "0003": "New Member"
 
-"0001",
-"0002",
-"0003"
-    
-];
-
+};
 
 
 // ===============================
 // CARD VERIFICATION
 // ===============================
 
-
 let verified = false;
+let currentMember = "";
 
 
 function verifyCard(){
@@ -313,12 +310,15 @@ let entered =
 document.getElementById("cardInput").value;
 
 
-if(memberCards.includes(entered)){
+if(memberCards[entered]){
 
 verified = true;
 
+currentMember = memberCards[entered];
+
+
 document.getElementById("status").innerHTML =
-"✅ Card Verified - Downloads Unlocked";
+"✅ Card Verified<br>Welcome, " + currentMember + "!<br>Downloads Unlocked";
 
 }
 
@@ -326,15 +326,14 @@ else{
 
 verified = false;
 
+currentMember = "";
+
 document.getElementById("status").innerHTML =
-"❌ Invalid Card Number";
+"❌ Invalid TechZMaxz Card Number";
 
 }
 
 }
-
-
-
 
 
 // ===============================
